@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.WpfApp", "Presentation.WpfApp\Presentation.WpfApp.csproj", "{3470FCBB-08F2-4388-865C-B5390F254EFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Application", "Core.Application\Core.Application.csproj", "{079C4BBB-25D9-42AF-A9A2-451D889C50BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +23,17 @@ Global
 		{3470FCBB-08F2-4388-865C-B5390F254EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3470FCBB-08F2-4388-865C-B5390F254EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3470FCBB-08F2-4388-865C-B5390F254EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079C4BBB-25D9-42AF-A9A2-451D889C50BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079C4BBB-25D9-42AF-A9A2-451D889C50BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079C4BBB-25D9-42AF-A9A2-451D889C50BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079C4BBB-25D9-42AF-A9A2-451D889C50BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3470FCBB-08F2-4388-865C-B5390F254EFC} = {B6A5F28C-5973-4C1C-AFFA-3A4E0EC84EC8}
+		{079C4BBB-25D9-42AF-A9A2-451D889C50BD} = {BA03B3AB-2390-4B18-868C-9CADD0577665}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4279D58-5CA6-4D79-86E4-B8CA0760B110}

@@ -11,5 +11,23 @@
                       WindowState="Maximized"
                       dialog:DialogParticipation.Register="{Binding}"
                       mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" IsMainMenu="True">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Iniciar Conexion"
+                          cal:Message.Attach="IniciarConexionAsync" />
+                <MenuItem Header="Terminar Conexion"
+                          cal:Message.Attach="TerminarConexionAsync" />
+                <Separator />
+                <MenuItem Header="Iniciar Sesion Usuario" cal:Message.Attach="IniciarSesionUsuarioAsync" />
+                <MenuItem Header="Iniciar Sesion Usuario Parametros"
+                          cal:Message.Attach="IniciarSesionUsuarioParametrosAsync" />
+            </MenuItem>
+        </Menu>
+    </Grid>
 </controls:MetroWindow>

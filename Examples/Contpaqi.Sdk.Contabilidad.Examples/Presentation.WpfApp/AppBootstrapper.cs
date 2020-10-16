@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using Autofac;
 using Caliburn.Micro;
+using Core.Application.Sesiones.Interfaces;
 using Presentation.WpfApp.Config;
 using Presentation.WpfApp.ViewModels;
 
 namespace Presentation.WpfApp
 {
-    public class AppBootstrapper :  BootstrapperBase
+    public class AppBootstrapper : BootstrapperBase
     {
         private IContainer _container;
 
@@ -60,6 +58,14 @@ namespace Presentation.WpfApp
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
             DisplayRootViewFor<ShellViewModel>();
+        }
+
+        protected override void OnExit(object sender, EventArgs e)
+        {
+            var sesionService = _container.Resolve<ISesionService>();
+            sesionService.TerminarConexion();
+
+            base.OnExit(sender, e);
         }
     }
 }
