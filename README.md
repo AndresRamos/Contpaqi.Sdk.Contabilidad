@@ -26,7 +26,7 @@ Este repositorio contiene documentacion y ejemplos de como utilizar el SDK de CO
 * También pueden explorar este repositorio de Github donde podrán encontrar documentación y ejemplos.
 
 # Curso Basico SDK CONTPAQi Contabilidad
-Si buscan tutoriales y ejemplos de como desarrollar aplicaciones utilizando el SDK de CONTPAQi Contabilidad pueden hacerlo tomando nuestro [curso basico]((https://www.youtube.com/playlist?list=PLuJ1O2N9XXg6bXQI0lBp7kgAGSCJSUbVt)) disponible en YouTube
+Si buscan tutoriales y ejemplos de como desarrollar aplicaciones utilizando el SDK de CONTPAQi Contabilidad pueden hacerlo tomando nuestro [curso basico](https://www.youtube.com/playlist?list=PLuJ1O2N9XXg6bXQI0lBp7kgAGSCJSUbVt) disponible en YouTube
 
 ## Temario
 1. [Introduccion](https://www.youtube.com/watch?v=I_UiYNof0DA&list=PLuJ1O2N9XXg6bXQI0lBp7kgAGSCJSUbVt&index=1)
