@@ -34,6 +34,9 @@
     <Reference Include="Autofac, Version=6.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.6.0.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="MediatR, Version=9.0.0.0, Culture=neutral, PublicKeyToken=bb9a41a5e8aaa7e2, processorArchitecture=MSIL">
       <HintPath>..\packages\MediatR.9.0.0\lib\net461\MediatR.dll</HintPath>
     </Reference>
@@ -69,6 +72,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Helpers\SdkResult.cs" />
+    <Compile Include="Empresas\Commands\AbrirEmpresa\AbrirEmpresaCommand.cs" />
+    <Compile Include="Empresas\Commands\AbrirEmpresa\AbrirEmpresaCommandHandler.cs" />
+    <Compile Include="Empresas\Commands\CerrarEmpresa\CerrarEmpresaCommand.cs" />
+    <Compile Include="Empresas\Commands\CerrarEmpresa\CerrarEmpresaCommandHandler.cs" />
+    <Compile Include="Empresas\Interfaces\IEmpresaRepository.cs" />
+    <Compile Include="Empresas\Mappings\EmpresaAutommaperProfile.cs" />
+    <Compile Include="Empresas\Models\EmpresaDto.cs" />
+    <Compile Include="Empresas\Queries\BuscarEmpresaPorId\BuscarEmpresaPorIdQuery.cs" />
+    <Compile Include="Empresas\Queries\BuscarEmpresaPorId\BuscarEmpresaPorIdQueryHandler.cs" />
+    <Compile Include="Empresas\Queries\BuscarTodasLasEmpresas\BuscarTodasLasEmpresasQuery.cs" />
+    <Compile Include="Empresas\Queries\BuscarTodasLasEmpresas\BuscarTodasLasEmpresasQueryHandler.cs" />
+    <Compile Include="Empresas\Servicios\EmpresasRepository.cs" />
     <Compile Include="Infrastructure\DependencyInjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sesiones\Commands\IniciarConexion\IniciarConexionCommand.cs" />

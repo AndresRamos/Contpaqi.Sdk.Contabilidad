@@ -1,4 +1,5 @@
-﻿using Core.Application.Sesiones.Interfaces;
+﻿using Core.Application.Common.Helpers;
+using Core.Application.Sesiones.Interfaces;
 using SDKCONTPAQNGLib;
 
 namespace Core.Application.Sesiones.Services
@@ -11,6 +12,8 @@ namespace Core.Application.Sesiones.Services
         {
             _sdkSesion = sdkSesion;
         }
+
+        public bool EmpresaAbierta { get; private set; }
 
         public bool ConexionInciada { get; private set; }
 
@@ -56,6 +59,23 @@ namespace Core.Application.Sesiones.Services
             {
                 SesionUsuarioIniciada = true;
             }
+        }
+
+        public void AbrirEmpresa(string nombreBaseDatos)
+        {
+            var sdkResult = _sdkSesion.abreEmpresa(nombreBaseDatos);
+
+            if (sdkResult == SdkResult.Success)
+            {
+                EmpresaAbierta = true;
+            }
+        }
+
+        public void CierraEmpresa()
+        {
+            _sdkSesion.cierraEmpresa();
+
+            EmpresaAbierta = false;
         }
     }
 }

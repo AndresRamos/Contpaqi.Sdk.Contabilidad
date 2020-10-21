@@ -27,6 +27,9 @@
                 <MenuItem Header="Iniciar Sesion Usuario" cal:Message.Attach="IniciarSesionUsuarioAsync" />
                 <MenuItem Header="Iniciar Sesion Usuario Parametros"
                           cal:Message.Attach="IniciarSesionUsuarioParametrosAsync" />
+                <Separator />
+                <MenuItem Header="Abrir Empresa" cal:Message.Attach="AbrirEmpresaAsync" />
+                <MenuItem Header="Cerrar Empresa" cal:Message.Attach="CerrarEmpresaAsync" />
             </MenuItem>
         </Menu>
     </Grid>
