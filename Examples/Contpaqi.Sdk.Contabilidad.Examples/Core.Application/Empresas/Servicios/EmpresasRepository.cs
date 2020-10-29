@@ -23,7 +23,6 @@ namespace Core.Application.Empresas.Servicios
             var empresas = new List<EmpresaDto>();
 
             var sdkResult = _sdkListaEmpresas.buscaPrimero();
-
             if (sdkResult == SdkResult.Success)
             {
                 var empresa = _mapper.Map<TSdkListaEmpresas, EmpresaDto>(_sdkListaEmpresas);

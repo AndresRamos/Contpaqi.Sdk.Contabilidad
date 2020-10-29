@@ -10,11 +10,12 @@ using Core.Application.Sesiones.Commands.TerminarConexion;
 using Core.Application.Sesiones.Interfaces;
 using MahApps.Metro.Controls.Dialogs;
 using MediatR;
+using Presentation.WpfApp.ViewModels.CuentasContables;
 using Presentation.WpfApp.ViewModels.Empresas;
 
 namespace Presentation.WpfApp.ViewModels
 {
-    public sealed class ShellViewModel : Screen
+    public sealed class ShellViewModel : Conductor<Screen>
     {
         private readonly IDialogCoordinator _dialogCoordinator;
         private readonly IMediator _mediator;
@@ -38,6 +39,8 @@ namespace Presentation.WpfApp.ViewModels
         public bool CanAbrirEmpresaAsync => _sesionService.ConexionInciada && _sesionService.SesionUsuarioIniciada && !_sesionService.EmpresaAbierta;
 
         public bool CanCerrarEmpresaAsync => _sesionService.ConexionInciada && _sesionService.SesionUsuarioIniciada && _sesionService.EmpresaAbierta;
+
+        public bool CanMostrarCatalogoCuentasContablesAsync => _sesionService.ConexionInciada && _sesionService.SesionUsuarioIniciada && _sesionService.EmpresaAbierta;
 
         public async Task IniciarConexionAsync()
         {
@@ -178,6 +181,23 @@ namespace Presentation.WpfApp.ViewModels
             }
         }
 
+        public async Task MostrarCatalogoCuentasContablesAsync()
+        {
+            try
+            {
+                var viewModel = IoC.Get<ListadoCuentasContablesViewModel>();
+                ActivateItem(viewModel);
+            }
+            catch (Exception e)
+            {
+                await _dialogCoordinator.ShowMessageAsync(this, "Error", e.ToString());
+            }
+            finally
+            {
+                RaiseGuards();
+            }
+        }
+
         private void RaiseGuards()
         {
             NotifyOfPropertyChange(() => CanIniciarConexionAsync);
@@ -186,6 +206,7 @@ namespace Presentation.WpfApp.ViewModels
             NotifyOfPropertyChange(() => CanIniciarSesionUsuarioParametrosAsync);
             NotifyOfPropertyChange(() => CanAbrirEmpresaAsync);
             NotifyOfPropertyChange(() => CanCerrarEmpresaAsync);
+            NotifyOfPropertyChange(() => CanMostrarCatalogoCuentasContablesAsync);
         }
     }
 }

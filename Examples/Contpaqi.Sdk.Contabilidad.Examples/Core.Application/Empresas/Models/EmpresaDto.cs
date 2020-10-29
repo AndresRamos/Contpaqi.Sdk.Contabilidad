@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Core.Application.Empresas.Models
+﻿namespace Core.Application.Empresas.Models
 {
     public class EmpresaDto
     {

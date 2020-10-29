@@ -113,6 +113,7 @@
     </ApplicationDefinition>
     <Compile Include="Config\AutoMapperModule.cs" />
     <Compile Include="Config\DependencyInjectionConfig.cs" />
+    <Compile Include="ViewModels\CuentasContables\ListadoCuentasContablesViewModel.cs" />
     <Compile Include="ViewModels\Empresas\SeleccionarEmpresaViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="App.xaml.cs">
@@ -120,6 +121,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="Views\CuentasContables\ListadoCuentasContablesView.xaml.cs">
+      <DependentUpon>ListadoCuentasContablesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Empresas\SeleccionarEmpresaView.xaml.cs">
       <DependentUpon>SeleccionarEmpresaView.xaml</DependentUpon>
     </Compile>
@@ -166,6 +170,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\CuentasContables\ListadoCuentasContablesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Empresas\SeleccionarEmpresaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

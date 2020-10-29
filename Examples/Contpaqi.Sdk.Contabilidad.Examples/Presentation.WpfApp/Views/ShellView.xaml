@@ -3,7 +3,6 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                      xmlns:local="clr-namespace:Presentation.WpfApp.Views"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
                       xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
@@ -31,6 +30,11 @@
                 <MenuItem Header="Abrir Empresa" cal:Message.Attach="AbrirEmpresaAsync" />
                 <MenuItem Header="Cerrar Empresa" cal:Message.Attach="CerrarEmpresaAsync" />
             </MenuItem>
+            <MenuItem Header="Catalogos">
+                <MenuItem Header="Cuentas Contables"
+                          cal:Message.Attach="MostrarCatalogoCuentasContablesAsync" />
+            </MenuItem>
         </Menu>
+        <ContentControl Grid.Row="1" x:Name="ActiveItem"></ContentControl>
     </Grid>
 </controls:MetroWindow>

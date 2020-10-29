@@ -7,6 +7,7 @@ using Core.Application.Sesiones.Commands.IniciarConexion;
 using MahApps.Metro.Controls.Dialogs;
 using MediatR;
 using Presentation.WpfApp.ViewModels;
+using Presentation.WpfApp.ViewModels.CuentasContables;
 using Presentation.WpfApp.ViewModels.Empresas;
 
 namespace Presentation.WpfApp.Config
@@ -28,6 +29,7 @@ namespace Presentation.WpfApp.Config
             // ViewModels
             containerBuilder.RegisterType<ShellViewModel>();
             containerBuilder.RegisterType<SeleccionarEmpresaViewModel>();
+            containerBuilder.RegisterType<ListadoCuentasContablesViewModel>();
 
             // Mediatr
             containerBuilder.RegisterType<Mediator>().As<IMediator>().InstancePerLifetimeScope();

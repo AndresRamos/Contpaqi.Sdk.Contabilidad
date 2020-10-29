@@ -73,6 +73,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Helpers\SdkResult.cs" />
+    <Compile Include="CuentasContables\Mappings\CuentaContableAutomapperProfile.cs" />
+    <Compile Include="CuentasContables\Models\CuentaContableDto.cs" />
+    <Compile Include="CuentasContables\Queries\BuscarCuentasContablesPorCodigo\BuscarCuentasContablesPorCodigoQuery.cs" />
+    <Compile Include="CuentasContables\Queries\BuscarCuentasContablesPorCodigo\BuscarCuentasContablesPorCodigoQueryHandler.cs" />
+    <Compile Include="CuentasContables\Queries\BuscarCuentasContablesPorNombre\BuscarCuentasContablesPorNombreQuery.cs" />
+    <Compile Include="CuentasContables\Queries\BuscarCuentasContablesPorNombre\BuscarCuentasContablesPorNombreQueryHandler.cs" />
+    <Compile Include="CuentasContables\Services\CuentaContableRepository.cs" />
+    <Compile Include="CuentasContables\Interfaces\ICuentaContableRepository.cs" />
     <Compile Include="Empresas\Commands\AbrirEmpresa\AbrirEmpresaCommand.cs" />
     <Compile Include="Empresas\Commands\AbrirEmpresa\AbrirEmpresaCommandHandler.cs" />
     <Compile Include="Empresas\Commands\CerrarEmpresa\CerrarEmpresaCommand.cs" />
